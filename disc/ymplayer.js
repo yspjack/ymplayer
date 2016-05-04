@@ -422,7 +422,7 @@ var Ymplayer = {
 }
 
 function hasClass(e,c){
-	return e.className.match(new RegExp('(\\s|^)'+c+'(\\s|$)'))?true:false;
+	return e.className.match(new RegExp('(\\s|^)'+c+'(\\s|$)'));
 }
 function addClass(e,c){
 	if(!c||hasClass(e,c)){return}
@@ -455,7 +455,7 @@ function getRect(elements){
 	}; 
 }
 function inRect(rect, x, y) {
-	return ((x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom) ? true : false);
+	return x >= rect.left && x <= rect.right && y >= rect.top && y <= rect.bottom;
 }
 
 var SVG = {
